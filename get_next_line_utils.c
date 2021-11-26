@@ -6,7 +6,7 @@
 /*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:38:05 by abiersoh          #+#    #+#             */
-/*   Updated: 2021/11/26 01:29:22 by abiersoh         ###   ########.fr       */
+/*   Updated: 2021/11/26 02:48:40 by abiersoh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ t_list	*ft_lstnnew(void *s, int begin, int end)
 	l = (t_list *) malloc(sizeof(t_list));
 	if (!l)
 		return (NULL);
-	//printf("%s", s);
 	l->content = ft_strndup((char *)s, begin, end);
 	if (!(l->content))
 	{

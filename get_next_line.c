@@ -6,7 +6,7 @@
 /*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:37:59 by abiersoh          #+#    #+#             */
-/*   Updated: 2021/11/26 02:21:56 by abiersoh         ###   ########.fr       */
+/*   Updated: 2021/11/26 02:48:59 by abiersoh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,23 +67,20 @@ char	*ft_makeline(t_list *lst, int n)
 		while (cpy[j])
 		{
 			dest[i++] = cpy[j++];
-
 		}
 		cursor = cursor->next;
 	}
 	dest[i] = '\0';
-	//printf("%s", dest);
 	return (dest);
 }
+
 char	*get_next_line(int fd)
 {
 	static t_buf	reader = {.buffer = "", .memo = 0, .begin = 0};
 	char			*dest;
 	t_count			count;
 	t_list			*lst;
-	static int	counter = 0;
 
-	counter++;
 	count.end = 0;
 	if (!(reader.buffer[0]) && (read(fd, reader.buffer, BUFFER_SIZE) <= 0))
 		return (NULL);
@@ -102,7 +99,5 @@ char	*get_next_line(int fd)
 		free(dest);
 		return (NULL);
 	}
-//	printf("\n-->%d<--", counter);
 	return (dest);
-
 }

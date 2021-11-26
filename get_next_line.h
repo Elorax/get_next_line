@@ -6,7 +6,7 @@
 /*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:50:16 by abiersoh          #+#    #+#             */
-/*   Updated: 2021/11/26 02:16:36 by abiersoh         ###   ########.fr       */
+/*   Updated: 2021/11/26 02:48:13 by abiersoh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_count
 
 typedef struct s_buf
 {
-	char	buffer[BUFFER_SIZE];
+	char	buffer[BUFFER_SIZE + 1];
 	int		memo;
 	int		begin;
 }	t_buf;
