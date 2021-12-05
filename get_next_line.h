@@ -6,7 +6,7 @@
 /*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:50:16 by abiersoh          #+#    #+#             */
-/*   Updated: 2021/11/26 02:48:13 by abiersoh         ###   ########.fr       */
+/*   Updated: 2021/12/05 08:41:57 by abiersoh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_buf
 
 typedef struct s_list
 {
-	void			*content;
+	char			content[BUFFER_SIZE + 1];
 	struct s_list	*next;
 }	t_list;
 
